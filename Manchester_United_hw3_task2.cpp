@@ -6,6 +6,13 @@
 
 using namespace std;
 // Constants, Structs, Classes
+class SerialNumber{
+private:
+    int serial_number;
+    static int record_count;
+public:
+    SerialNumber(int num):serial_number(num){record_count++;}
+};
 
 
 // Prototypes
