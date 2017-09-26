@@ -11,9 +11,8 @@ private:
 public:
     void getDate()
     {
-        int tempchar;
+        char tempchar;
 
-        // Not Working
         cin >> month >> tempchar >> day >> tempchar >> year;
     }
     void showDate()
@@ -31,7 +30,11 @@ int main()
     date d1, d2;
     cout << "Enter a date (format 12/31/99): ";
     d1.getDate();
+    cout << "Enter another date: ";
+    d2.getDate();
+
     d1.showDate();
+    d2.showDate();
     return 0;
 }
 
