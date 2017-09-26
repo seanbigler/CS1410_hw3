@@ -12,7 +12,6 @@ using namespace std;
 
 // Main Program Program
 int main(void) {
-#$END$
     return 0;
 }
 // Function Definitions
