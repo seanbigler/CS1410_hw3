@@ -28,12 +28,14 @@ public:
 int main()
 {
     date d1, d2;
-    cout << "Enter a date (format 12/31/99): ";
+    cout << "Enter a date (format 12/31/1999): ";
     d1.getDate();
     cout << "Enter another date: ";
     d2.getDate();
 
+    cout << "date1 = ";
     d1.showDate();
+    cout << "date2 = ";
     d2.showDate();
     return 0;
 }
