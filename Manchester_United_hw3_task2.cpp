@@ -11,14 +11,14 @@ private:
     int serialNumber;
     static int record_count;
 public:
-   // Serial(): serial_number(0){record_count++;}
-    Serial(int num):serialNumber(num){record_count++;}
+    Serial(): serialNumber(record_count+1){record_count++;}
+    //Serial(int num):serialNumber(num){ record_count++;}
     int getSerial()
     {
         return serialNumber;
     }
 };
-
+ int Serial::record_count=0;
 
 // Prototypes
 void showSerial(Serial);
@@ -26,11 +26,11 @@ void showSerial(Serial);
 
 // Main Program Program
 int main() {
-    Serial alpha(0);
-    int serial = alpha.getSerial();
-    Serial betta(serial);
-    serial = betta.getSerial();
-    Serial gamma(serial);
+    Serial alpha, betta, gamma;
+   // int serialA = alpha.getSerial();
+    showSerial(alpha);
+    showSerial(betta);
+    showSerial(gamma);
 
     return 0;
 }
