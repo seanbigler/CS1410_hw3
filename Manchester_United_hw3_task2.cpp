@@ -11,7 +11,9 @@ private:
     int serialNumber;
     static int record_count;
 public:
+    // constructor
     Serial(): serialNumber(record_count+1){record_count++;}
+
     int getSerial();
 };
 
@@ -24,6 +26,8 @@ void showSerial(Serial);
 // Main Program Program
 int main() {
     Serial alpha, betta, gamma;
+
+    // call showSerial
     showSerial(alpha);
     showSerial(betta);
     showSerial(gamma);
@@ -34,10 +38,11 @@ int main() {
 // Function Definitions
 void showSerial(Serial s)
 {
+    // print number of object
     cout << "I am object number " << s.getSerial() << endl;
 }
 
 int Serial::getSerial()
 {
-    return serialNumber;
+    return serialNumber; // return the serial number
 }
