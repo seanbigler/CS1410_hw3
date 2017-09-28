@@ -12,12 +12,9 @@ private:
     static int record_count;
 public:
     Serial(): serialNumber(record_count+1){record_count++;}
-    //Serial(int num):serialNumber(num){ record_count++;}
-    int getSerial()
-    {
-        return serialNumber;
-    }
+    int getSerial();
 };
+
  int Serial::record_count=0;
 
 // Prototypes
@@ -27,7 +24,6 @@ void showSerial(Serial);
 // Main Program Program
 int main() {
     Serial alpha, betta, gamma;
-   // int serialA = alpha.getSerial();
     showSerial(alpha);
     showSerial(betta);
     showSerial(gamma);
@@ -39,4 +35,9 @@ int main() {
 void showSerial(Serial s)
 {
     cout << "I am object number " << s.getSerial() << endl;
+}
+
+int Serial::getSerial()
+{
+    return serialNumber;
 }
